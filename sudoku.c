@@ -46,9 +46,9 @@ int main(void)
 	int r,c;r=0;c=0;
  	for(i=1;i<10;i++)
  	{
- 		for(j=0;j<strlen(arr[i]);j++)
+ 		for(j=0;j<strlen(arr[i])-1;j++)
  		{
- 			if(arr[i][j]!=' ' || arr[i][j]!='\n')
+ 			if(arr[i][j]!=' ')
  			{
  				board[r][c] = (int)arr[i][j] - 48;
  				c++;

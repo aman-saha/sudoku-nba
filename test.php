@@ -28,24 +28,25 @@
     {
         if(empty($s1[$i]))
             $s1[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s2[$i]))
             $s2[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s3[$i]))
             $s3[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s4[$i]))
             $s4[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s5[$i]))
             $s5[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s6[$i]))
             $s6[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s7[$i]))
             $s7[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s8[$i]))
             $s8[$i]=0;
-        if(empty($s1[$i]))
+        if(empty($s9[$i]))
             $s9[$i]=0;
     }
-    /*$handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+    //print_r($s2);
+    $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
     fwrite($handle, $current_username."\n");
     for($i=0;$i<9;$i++)
     {
@@ -94,15 +95,15 @@
     //print_r($s1);
 	// used to compile the c file using exec() in php
 
-    	$filename = "sudoku.c";
-        $op_file = "amna";
-        chmod($filename,0777);
-        $command = "gcc -pthread " . $filename . " -o " . $op_file;
-        $output = shell_exec($command);
-        $output = shell_exec('./amna');    
-        if( !empty($output) )                      
-        {
-            $output = htmlspecialchars($output);
-            echo "<pre>$output</pre>";
-        }*/
+	$filename = "sudoku.c";
+    $op_file = "amna";
+    chmod($filename,0777);
+    $command = "gcc -pthread " . $filename . " -o " . $op_file;
+    $output = shell_exec($command);
+    $output = shell_exec('./amna');    
+    if( !empty($output) )                      
+    {
+        $output = htmlspecialchars($output);
+        echo "<pre>$output</pre>";
+    }
 ?>

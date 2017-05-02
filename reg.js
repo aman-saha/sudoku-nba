@@ -132,7 +132,7 @@ $(document).ready(function(){
 	    var s8 = [s81,s82,s83,s84,s85,s86,s87,s88,s89];
 	    var s9 = [s91,s92,s93,s94,s95,s96,s97,s98,s99];
 
-	    alert(s1);
+	    alert(s2);
 	    $.ajax({
 		  type: 'POST',
 		  url: 'test.php',
