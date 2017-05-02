@@ -30,7 +30,7 @@ int main(void)
 	size_t len = 0;
 	ssize_t read;
  	int i=0,j=0;
-	stream = fopen("solution.txt", "r");
+	stream = fopen("user_input/solution.txt", "r");
 	if (stream == NULL)
 		exit(EXIT_FAILURE);
  
@@ -55,7 +55,7 @@ int main(void)
  		c=0;
  		r++;
  	}
- 	printf("%s\n", arr[0]);
+ 	printf("%s", arr[0]);
  	for(i=0;i<9;i++)
  	{
  		for(j=0;j<9;j++)
