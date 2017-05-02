@@ -14,6 +14,7 @@
     redirect_to("index.php");
 ?>
 <?php
+    $my_file = "solution.txt";
     $s1 = $_POST['s1'];
     $s2 = $_POST['s2'];
     $s3 = $_POST['s3'];
@@ -44,10 +45,56 @@
         if(empty($s1[$i]))
             $s9[$i]=0;
     }
+    /*$handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+    fwrite($handle, $current_username."\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s1[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s2[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s3[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s4[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s5[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s6[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s7[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s8[$i]." ");
+    }
+    fwrite($handle, "\n");
+    for($i=0;$i<9;$i++)
+    {
+        fwrite($handle, $s9[$i]." ");
+    }
     //print_r($s1);
 	// used to compile the c file using exec() in php
 
-    	/*$filename = "sudoku.c";
+    	$filename = "sudoku.c";
         $op_file = "amna";
         chmod($filename,0777);
         $command = "gcc -pthread " . $filename . " -o " . $op_file;

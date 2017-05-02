@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <pthread.h>
 /*
 * Structure that holds the parameters passed to a thread.
@@ -30,7 +31,7 @@ int main(void)
 	size_t len = 0;
 	ssize_t read;
  	int i=0,j=0;
-	stream = fopen("user_input/solution.txt", "r");
+	stream = fopen("solution.txt", "r");
 	if (stream == NULL)
 		exit(EXIT_FAILURE);
  
@@ -47,7 +48,7 @@ int main(void)
  	{
  		for(j=0;j<strlen(arr[i]);j++)
  		{
- 			if(arr[i][j]!=' ')
+ 			if(arr[i][j]!=' ' || arr[i][j]!='\n')
  			{
  				board[r][c] = (int)arr[i][j] - 48;
  				c++;
