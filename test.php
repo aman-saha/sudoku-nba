@@ -46,6 +46,7 @@
             $s9[$i]=0;
     }
     //print_r($s2);
+    $semaphore = 1;
     $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
     fwrite($handle, $current_username."\n");
     for($i=0;$i<9;$i++)
@@ -104,6 +105,6 @@
     if( !empty($output) )                      
     {
         $output = htmlspecialchars($output);
-        echo "<pre>$output</pre>";
+        echo "$output";
     }
 ?>

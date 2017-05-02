@@ -170,10 +170,10 @@ if ((int) all_rows == 1 &&
 (int) square8 == 1 && 
 (int) square9 == 1 )
 {
-	printf("The Sudoku Puzzle is solved!\n");
+	printf("YAYY. The Sudoku Puzzle is solved!\n");
 }
 else {
-printf("The Sudoku Puzzle is NOT solved.\n");
+printf("Oops.The Sudoku Puzzle is NOT solved. Try Again!\n");
 }
 return 0;
 }
