@@ -165,6 +165,7 @@ footer {
    </div>
 </form>
 </div>
+<br><br>
   <footer>
     <button type="button" class="cta" id ="solution">Sumbit Solution</button>
     <a class="cta" href="logout.php">Logout <?php echo "$current_username"; ?> </a>

@@ -96,11 +96,11 @@
 	// used to compile the c file using exec() in php
 
 	$filename = "sudoku.c";
-    $op_file = "amna";
+    $op_file = $current_username;
     chmod($filename,0777);
     $command = "gcc -pthread " . $filename . " -o " . $op_file;
     $output = shell_exec($command);
-    $output = shell_exec('./amna');    
+    $output = shell_exec('./'.$op_file);    
     if( !empty($output) )                      
     {
         $output = htmlspecialchars($output);
