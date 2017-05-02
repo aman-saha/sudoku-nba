@@ -1,119 +1,72 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Sudoku</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+	<title>Welcome to Sudoku Race</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<style type="text/css">
+	@import "bourbon";
 
+body {
+	background: #eee !important;	
+}
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+</style>
 <body>
-  <form id="grid">
-  <div id="subgrid-1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="6" disabled>
-     <input type="text" maxlength="1">
-  </div>
-  <div id="subgrid-2">
-     <input type="text" maxlength="1" value="1" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="3" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="7" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="5" disabled>
-  </div>
-  <div id="subgrid-3">
-     <input type="text" maxlength="1" value="9" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="7" disabled>
-     <input type="text" maxlength="1" value="5" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="6" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="3" disabled>
-     <input type="text" maxlength="1" value="2" disabled>
-  </div>
-  <div id="subgrid-4">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="8" disabled>
-     <input type="text" maxlength="1" value="3" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="2" disabled>
-  </div>
-  <div id="subgrid-5">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="1" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-  </div>
-  <div id="subgrid-6">
-     <input type="text" maxlength="1" value="8" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="9" disabled>
-     <input type="text" maxlength="1" value="4" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-  </div>
-  <div id="subgrid-7">
-     <input type="text" maxlength="1" value="4" disabled>
-     <input type="text" maxlength="1" value="8" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="6" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="1" disabled>
-     <input type="text" maxlength="1" value="2" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="5" disabled>
-  </div>
-  <div id="subgrid-8">
-     <input type="text" maxlength="1" value="3" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="9" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="7" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="1" disabled>
-   </div>
-  <div id="subgrid-9">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1" value="9" disabled>
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-     <input type="text" maxlength="1">
-   </div>
-</form>
-  
-  
+	<div class="wrapper">
+		<form class="form-signin">       
+		  <h2 class="form-signin-heading">Sudoku login</h2>
+		  <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required="" autofocus="" />
+		  <br>
+		  <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required=""/> 
+		  <br><br>     
+		  <button class="btn btn-lg btn-primary btn-block" type="submit" id="register">Login</button>   
+		</form>
+  	</div>
+  	<script src="reg.js"></script>
 </body>
 </html>
