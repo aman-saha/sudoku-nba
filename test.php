@@ -93,6 +93,7 @@
     {
         fwrite($handle, $s9[$i]." ");
     }
+    $semaphore=0;
 	// used to compile the c file using exec() in php
 
 	$filename = "sudoku.c";

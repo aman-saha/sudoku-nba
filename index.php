@@ -80,7 +80,7 @@
 		</div>
 		<script src="reg.js"></script>
 		<footer>
-		    Hello. You can drop a mail here : darknurd@gmail.com
+		    Hello. You can drop a mail here : bns@gmail.com
 		  </footer>
 	</body>
 </html>

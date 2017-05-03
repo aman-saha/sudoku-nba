@@ -152,7 +152,7 @@ function checkStatus(status)
 	var data = $.trim(status);
 	if(data=="0")
 	{
-		$(location).attr('href', 'index.php');
+		$(location).attr('href', 'sudoku.php');
 	}
 	else if(data=="1")
 	{
@@ -160,6 +160,6 @@ function checkStatus(status)
 	}
 	else if(data=="2")
 	{
-		$(location).attr('href', 'index.php');
+		$(location).attr('href', 'sudoku.php');
 	}
 }
