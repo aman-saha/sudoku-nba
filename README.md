@@ -1,2 +1,2 @@
 # sudoku-nba
-#Play Sudoku and have fun
+Play Sudoku and have fun!
