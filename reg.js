@@ -1,8 +1,6 @@
 $(document).ready(function(){
 	$("#register").click(function()
 	{
-	  	//var btnval = $(this).html();
-	  	//alert(btnval);
 		var name = $("#name").val();
 		//alert(name);
 	    validName(name);
@@ -132,7 +130,7 @@ $(document).ready(function(){
 	    var s8 = [s81,s82,s83,s84,s85,s86,s87,s88,s89];
 	    var s9 = [s91,s92,s93,s94,s95,s96,s97,s98,s99];
 
-	    alert(s2);
+	    alert("We are processing your solution...");
 	    $.ajax({
 		  type: 'POST',
 		  url: 'test.php',

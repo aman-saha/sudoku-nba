@@ -17,7 +17,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Sudoku</title>  
+  <title>Sudoku RACE</title>  
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -37,8 +37,7 @@ footer {
   text-align:center;
   background:white;
 }
-.cta
-{
+.cta{
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
   font-weight:500;
   text-decoration:none;
@@ -52,8 +51,7 @@ footer {
   box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(0,0,0,0.3) inset;
 }
 
-.cta-colouring(@main-color)
-{
+.cta-colouring(@main-color){
    border:1px solid darken(@main-color, 5%);
    background:@main-color;
 }
@@ -166,10 +164,10 @@ footer {
 </form>
 </div>
 <br><br>
-  <footer>
-    <button type="button" class="cta" id ="solution">Sumbit Solution</button>
-    <a class="cta" href="logout.php">Logout <?php echo "$current_username"; ?> </a>
-  </footer>
-  <script src="reg.js"></script>
+<footer>
+  <button type="button" class="cta" id ="solution">Sumbit Solution</button>
+  <a class="cta" href="logout.php">Logout <?php echo "$current_username"; ?> </a>
+</footer>
+<script src="reg.js"></script>
 </body>
 </html>

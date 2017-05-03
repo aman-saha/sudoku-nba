@@ -93,7 +93,6 @@
     {
         fwrite($handle, $s9[$i]." ");
     }
-    //print_r($s1);
 	// used to compile the c file using exec() in php
 
 	$filename = "sudoku.c";
@@ -102,7 +101,7 @@
     $command = "gcc -pthread " . $filename . " -o " . $op_file;
     $output = shell_exec($command);
     $output = shell_exec('./'.$op_file);    
-    if( !empty($output) )                      
+    if(!empty($output))                      
     {
         $output = htmlspecialchars($output);
         echo "$output";
