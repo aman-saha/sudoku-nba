@@ -59,7 +59,7 @@
 	<body>
 		<header>
 			<h2>WELCOME TO SUDOKU RACE</h2>
-			<h4>Created by Bees, Njay, Sid</h4>
+			<h4>Created by Bismita, Nidhi, Siddharth</h4>
 		</header>
 		<br/><br/><br/><br/><br/><br/><br/><br/>
 		<div class="container">
