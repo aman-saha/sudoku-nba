@@ -24,6 +24,7 @@ void * check_square(void * params);
 
 int main(void)
 {
+	//reading submitted solution by user	
 	FILE *stream;
 	char *line = NULL;
 	char arr[20][20];
@@ -184,26 +185,23 @@ Checks each row if it contains all digits 1-9.
 */
 void * walk_rows(void * params)
 {
-int i,j;
-parameters * data = (parameters *) params;
-int startRow = data->row;
-int startCol = data->col;
-for ( i = startRow; i < 9;i++)
-{
-int row[10] = {0};
-for ( j = startCol; j < 9; ++j)
-{
-int val = data->board[i][j];
-if (row[val] != 0)
-	{
-return (void *) 0;
-}
-else{
-row[val] = 1;
-}
-}
-}
-return (void *) 1;
+	int i,j;
+	parameters * data = (parameters *) params;
+	int startRow = data->row;
+	int startCol = data->col;
+	for ( i = startRow; i < 9;i++){
+		int row[10] = {0};
+		for ( j = startCol; j < 9; ++j){
+			int val = data->board[i][j];
+			if (row[val] != 0){
+				return (void *) 0;
+			}
+			else{
+			row[val] = 1;
+			}
+		}
+	}
+	return (void *) 1;
 }
 /*
 Checks each column if it contains all digits 1-9.
@@ -218,18 +216,18 @@ void * walk_cols(void * params)
 	int startCol = data->col;
 	for ( i = startCol; i < 9; ++i)
 	{
-	int col[10] = {0};
-	for (j = startRow; j < 9; ++j)
+		int col[10] = {0};
+		for (j = startRow; j < 9; ++j)
 		{
-	int val = data->board[j][i];
-	if (col[val] != 0)
-	{
-	return (void *) 0;
-	}
-	else{
-	col[val] = 1;
-	}
-	}
+			int val = data->board[j][i];
+			if (col[val] != 0)
+			{
+			return (void *) 0;
+			}
+			else{
+			col[val] = 1;
+			}
+		}
 	}
 	return (void *) 1;
 }
